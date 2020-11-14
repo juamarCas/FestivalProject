@@ -7,13 +7,6 @@ public class PwProyectil : MonoBehaviour
     void Update()
     {
         Destroy(gameObject, 8f);
-        gameObject.transform.Translate(new Vector3(0.9f, 0f, 0f));
-    }
-    void OnTriggerEnter(Collider PwProyectil)
-    {
-        if(PwProyectil.gameObject.tag == "Escudo")
-        {
-            Destroy(gameObject);
-        }
+        gameObject.transform.Translate(new Vector3(0f, 0f, 0.5f));
     }
 }

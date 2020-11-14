@@ -5,11 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - PoweUp
-  - Escudo
-  - Charco
-  - TeleProyectil
-  - Proyectil
-  - Enemigoo
   layers:
   - Default
   - TransparentFX

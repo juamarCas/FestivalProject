@@ -1,1 +1,2 @@
-# FestivalProject
+# RacingGame
+Racing game

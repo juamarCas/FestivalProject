@@ -8,7 +8,6 @@ public class ManagerPowerUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3(1f, 0f, 0f));
         Destroy(gameObject, 8f);
     }
 
