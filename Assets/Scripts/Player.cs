@@ -1,17 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
+using Utils.Checker; 
 
 public class Player : MonoBehaviour
 {
 //comentario arbitrario
     public Rigidbody sphere;
+    private GroundDetection groundDetection; 
 
     [Header("Componentes")]
     public float gravity = 10.0f;
     public float speed, currentSpeed;
     public float rotate, currentRotate;
     public Transform kartNormal;
+    [SerializeField] private Transform _groundDetector; 
     public GameObject kartModel; 
     public LayerMask layer; 
 
@@ -21,7 +23,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        groundDetection = new GroundDetection(_groundDetector, layer, 1.0f); 
     }
 
     // Update is called once per frame
@@ -29,11 +31,15 @@ public class Player : MonoBehaviour
     {
         if (MENUPAUSA.PAUSADO == false)
         {
-           if (Input.GetKey(KeyCode.W))
+            if (groundDetection.CheckGround())
             {
-                speed = acceleration;
+                if (Input.GetKey(KeyCode.W))
+                {
+                    speed = acceleration;
+                }
             }
 
+            Debug.Log(groundDetection.CheckGround()); 
             transform.position = sphere.transform.position - new Vector3(0, 0.4f, 0);
 
             if (Input.GetAxis("Horizontal") != 0)
@@ -79,5 +85,11 @@ public class Player : MonoBehaviour
     void Steer(int dir, float amaount)
     {
         rotate = (steering * dir) * amaount; 
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(_groundDetector.position, 1.0f);
     }
 }
