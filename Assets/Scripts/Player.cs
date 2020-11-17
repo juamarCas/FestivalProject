@@ -37,9 +37,15 @@ public class Player : MonoBehaviour
                 {
                     speed = acceleration;
                 }
-            }
 
-            Debug.Log(groundDetection.CheckGround()); 
+                if (Input.GetKey(KeyCode.S))
+                {
+                    speed = -acceleration / 4;
+                }
+            }
+           
+            Debug.Log(groundDetection.CheckGround());
+
             transform.position = sphere.transform.position - new Vector3(0, 0.4f, 0);
 
             if (Input.GetAxis("Horizontal") != 0)
