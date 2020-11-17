@@ -50,7 +50,11 @@ public class VerificadorVuelta : MonoBehaviour
         }
     }
 
-
-
-
+    public void Reset()
+    {
+        for(int i = 0; i < 4; i++)
+        {
+            CheckPoints[i] = false;
+        }
+    }
 }

@@ -42,6 +42,8 @@ public class LineaMeta : MonoBehaviour
                 {
                     other.GetComponent<VerificadorVuelta>().MostrarVuelta = true;
                 }
+
+                other.GetComponent<VerificadorVuelta>().Reset();
             }
             else
             {
@@ -53,8 +55,5 @@ public class LineaMeta : MonoBehaviour
         {
             //COLISIONA OTRA COSA, ESTA LINEA SI NO ES USADA LA PODEMOS ELIMINAR.
         }
-
-
     }
-
 }
