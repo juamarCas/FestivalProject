@@ -1892,7 +1892,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damping: {x: 0, y: 0, z: 0}
-  ShoulderOffset: {x: 0.98, y: 9.05, z: -9.02}
+  ShoulderOffset: {x: 0, y: 6, z: -9.02}
   VerticalArmLength: 0.4
   CameraSide: 1
   CameraDistance: 3.91
@@ -2769,8 +2769,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1072559675}
-  m_LocalRotation: {x: 0.1367927, y: 0.7029318, z: -0.14064854, w: 0.6836613}
-  m_LocalPosition: {x: -447.48676, y: -55.636826, z: 450.34775}
+  m_LocalRotation: {x: 0.13574897, y: 0.7079678, z: -0.14165618, w: 0.6784448}
+  m_LocalPosition: {x: -447.53934, y: -58.686825, z: 451.32632}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3429,6 +3429,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Carro_1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a9e3f87645f82045b42f33372cd3fe9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a9e3f87645f82045b42f33372cd3fe9, type: 3}
 --- !u!1 &1355586290
@@ -3995,8 +3999,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1808255217}
-  m_LocalRotation: {x: 0.1367927, y: 0.7029318, z: -0.14064854, w: 0.6836613}
-  m_LocalPosition: {x: -447.48676, y: -55.636826, z: 450.34775}
+  m_LocalRotation: {x: 0.13574897, y: 0.7079678, z: -0.14165618, w: 0.6784448}
+  m_LocalPosition: {x: -447.53934, y: -58.686825, z: 451.32632}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 798776375}
@@ -4477,7 +4481,7 @@ MonoBehaviour:
   kartModel: {fileID: 782703529}
   layer:
     serializedVersion: 2
-    m_Bits: 257
+    m_Bits: 768
   acceleration: 500
   steering: 20
 --- !u!4 &2100018614 stripped
