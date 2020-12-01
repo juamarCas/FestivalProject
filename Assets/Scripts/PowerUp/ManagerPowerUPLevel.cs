@@ -13,7 +13,7 @@ public class ManagerPowerUPLevel : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        Debug.Log(timer);
+        //Debug.Log(timer);
         if (timer >= 8)
         {
             for (int i = 0; i < posiciones.Length; i++)

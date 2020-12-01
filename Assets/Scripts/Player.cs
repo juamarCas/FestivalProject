@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
                 }
             }
            
-            Debug.Log(groundDetection.CheckGround());
+            //Debug.Log(groundDetection.CheckGround());
 
             transform.position = sphere.transform.position - new Vector3(0, 0.4f, 0);
 
